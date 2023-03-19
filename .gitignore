@@ -2,3 +2,6 @@
 /.git
 /model
 /dataset/images
+/application/backend/node_modules
+/application/backend/models
+ 
