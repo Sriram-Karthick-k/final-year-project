@@ -75,7 +75,7 @@ async function findResult(path){
 //function to remove the particular file
 async function removeFile(imagePath){ 
   try{
-    fs.rmSync(imagePath)
+    // fs.rmSync(imagePath)
   }catch(error){ 
     return false
   }
