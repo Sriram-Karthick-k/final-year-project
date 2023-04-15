@@ -36,6 +36,7 @@ app.route("/find-currency")
           .catch((error)=>{
             res.status(200).json({success:true,result:error}) 
           })
+          // res.status(200).json({success:true,result:"result"})
         }
       });  
     }catch(error){ 
@@ -45,7 +46,7 @@ app.route("/find-currency")
   })
 
 //function to calculate the answer
-async function findResult(path){
+async function findResult(path){ 
   return new Promise((res,rej)=>{
     try{
       const req=JSON.stringify({path,method:"imageProcess"})
@@ -75,7 +76,7 @@ async function findResult(path){
 //function to remove the particular file
 async function removeFile(imagePath){ 
   try{
-    // fs.rmSync(imagePath)
+    fs.rmSync(imagePath)
   }catch(error){ 
     return false
   }
